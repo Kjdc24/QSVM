@@ -1,0 +1,28 @@
+// Classical SVM Flowchart
+digraph {
+	rankdir=TB
+	subgraph cluster_Data {
+		color=lightgrey label="Data Class" style=filled
+		A [label="Load Dataset" shape=parallelogram]
+		B [label="Preprocess Data (Scaling)" shape=box]
+		C [label="Train-Test Split" shape=box]
+		D [label="Balance Training Data
+(Only Training Set)" shape=box]
+	}
+	subgraph cluster_SVM {
+		color=lightgrey label="Classical SVM Class" style=filled
+		E [label="Apply PCA (Dimensionality Reduction)" shape=box]
+		F [label="Hyperparameter Tuning (Grid Search)" shape=box]
+		G [label="Train SVM Model" shape=box]
+		H [label="Evaluate Model" shape=box]
+		I [label="Save Trained Model" shape=parallelogram]
+	}
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	G -> I
+}

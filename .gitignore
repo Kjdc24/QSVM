@@ -1,0 +1,16 @@
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore model files
+Saved_Models/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Miscellaneous files
+Misc/

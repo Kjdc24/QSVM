@@ -1,0 +1,28 @@
+// QSVM Flowchart
+digraph {
+	rankdir=TB
+	subgraph cluster_Data {
+		color=lightgrey label="Data Class" style=filled
+		A [label="Load Dataset" shape=parallelogram]
+		B [label="Preprocess Data (Scaling)" shape=box]
+		C [label="Train-Test Split" shape=box]
+		D [label="Balance Training Data
+(Only Training Set)" shape=box]
+	}
+	subgraph cluster_QSVM {
+		color=lightgrey label="QSVM Class" style=filled
+		E [label="Dimensionality Reduction (PCA)" shape=box]
+		F [label="Create Quantum Feature Map & Kernel" shape=box]
+		G [label="Train Quantum Support Vector Machine" shape=box]
+		H [label="Evaluate Model Performance" shape=box]
+		I [label="Save Trained Model" shape=parallelogram]
+	}
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	G -> I
+}
