@@ -6,9 +6,6 @@ venv/
 __pycache__/
 *.pyc
 
-# Ignore model files
-Saved_Models/
-
 # Ignore Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
