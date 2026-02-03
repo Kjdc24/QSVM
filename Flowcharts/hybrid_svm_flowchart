@@ -1,27 +1,14 @@
 // Hybrid SVM Flowchart
 digraph {
 	rankdir=TB
-	subgraph cluster_Data {
-		color=lightgrey label="Data Class" style=filled
-		A [label="Load Dataset" shape=parallelogram]
-		B [label="Preprocess Data (Scaling)" shape=box]
-		C [label="Train-Test Split" shape=box]
-		D [label="Balance Training Data
-(Only Training Set)" shape=box]
-	}
-	subgraph cluster_HybridSVM {
-		color=lightgrey label="Hybrid SVM Class" style=filled
-		E [label="Dimensionality Reduction (PCA)" shape=box]
-		F [label="Initialize Quantum Kernel" shape=box]
-		G [label="Hyperparameter Tuning (SVM)" shape=box]
-		H [label="Train Hybrid SVM" shape=box]
-		I [label="Evaluate Model Performance" shape=box]
-		J [label="Save Trained Model" shape=parallelogram]
-	}
-	A -> B
-	B -> C
-	C -> D
-	D -> E
+	Title [label="Hybrid SVM Class" shape=plaintext]
+	E [label="Dimensionality Reduction (PCA)" shape=box]
+	F [label="Initialize Quantum Kernel" shape=box]
+	G [label="Hyperparameter Tuning (SVM)" shape=box]
+	H [label="Train Hybrid SVM" shape=box]
+	I [label="Evaluate Model Performance" shape=box]
+	J [label="Save Trained Model" shape=parallelogram]
+	Title -> E [style=invis]
 	E -> F
 	F -> G
 	G -> H

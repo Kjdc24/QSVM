@@ -1,0 +1,14 @@
+// Data Class Flowchart
+digraph {
+	rankdir=TB
+	Title [label="Data Class" shape=plaintext]
+	A [label="Load Dataset" shape=parallelogram]
+	B [label="Preprocess Data" shape=box]
+	C [label="Train-Test Split" shape=box]
+	D [label="Balance Training Data
+(Only Training Set)" shape=box]
+	Title -> A [style=invis]
+	A -> B
+	B -> C
+	C -> D
+}
